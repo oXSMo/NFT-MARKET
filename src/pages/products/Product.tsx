@@ -2,7 +2,6 @@ import { useState } from "react";
 import { TNft } from "../../data/nfts";
 import { FaEthereum, FaHeart, FaRegHeart } from "react-icons/fa";
 import { BsHammer } from "react-icons/bs";
-import ProductModal from "./ProductModal";
 import { openModal, productSlice } from "../../store/useStore";
 
 function Product({ img, likes, price, sale, title }: TNft) {

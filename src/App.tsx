@@ -4,7 +4,6 @@ import Hero from "./pages/Hero";
 import "swiper/css/bundle";
 import BestSeller from "./pages/bestSeller/BestSeller";
 import Products from "./pages/products/Products";
-import { openModal } from "./store/useStore";
 import ProductModal from "./pages/products/ProductModal";
 
 

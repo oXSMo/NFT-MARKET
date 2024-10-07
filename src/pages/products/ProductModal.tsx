@@ -5,7 +5,6 @@ function ProductModal() {
   const { setOpenBid, openBid } = openModal();
   const { addOrder } = productSlice();
 
-
   return (
     <Modal
       open={openBid}
@@ -20,7 +19,9 @@ function ProductModal() {
         <h1 className=" ml-1 text-sm">Username</h1>
         <input
           type="text"
-          onChange={(e)=>{addOrder(e.target.value,"username")}}
+          onChange={(e) => {
+            addOrder(e.target.value, "username");
+          }}
           className="outline-none w-full bg- mb-2 mt-1 rounded-sm text-black py-0.5 px-3 placeholder:text-black/40"
           placeholder="username"
         />
@@ -31,7 +32,10 @@ function ProductModal() {
       <article className="my-1.5">
         <h1 className=" ml-1 text-sm">Email</h1>
         <input
-          type="text" onChange={(e)=>{addOrder(e.target.value,"email")}}
+          type="text"
+          onChange={(e) => {
+            addOrder(e.target.value, "email");
+          }}
           className="outline-none w-full bg- mb-2 mt-1 rounded-sm text-black py-0.5 px-3 placeholder:text-black/40"
           placeholder="your@email.com"
         />
@@ -41,7 +45,10 @@ function ProductModal() {
       <article className="my-1.5">
         <h1 className=" ml-1 text-sm">Your Bid</h1>
         <input
-          type="text" onChange={(e)=>{addOrder(e.target.value,"amount")}}
+          type="text"
+          onChange={(e) => {
+            addOrder(e.target.value, "amount");
+          }}
           className="outline-none w-full bg- mb-2 mt-1 rounded-sm text-black py-0.5 px-3 placeholder:text-black/40"
           placeholder="your best bid"
         />
@@ -52,8 +59,6 @@ function ProductModal() {
       </button>
     </Modal>
   );
-} 
-
-type t = { open: boolean; setopen: (t: boolean) => void };
+}
 
 export default ProductModal;

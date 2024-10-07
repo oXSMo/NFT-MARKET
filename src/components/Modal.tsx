@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 const Modal = ({
   children,
@@ -11,7 +11,7 @@ const Modal = ({
   open: boolean;
   onClose: (value: boolean) => void;
 }) => {
-  document.body.style.overflow =  open ? "hidden" : ""
+  document.body.style.overflow = open ? "hidden" : "";
 
   return (
     <article
