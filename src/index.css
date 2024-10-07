@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-weight: 600;
+  font-family: "Orbitron";
+  background-color: black;
+  color: white;
+}
+
+.scrollnone {
+  overflow: auto;
+  /* Hide default scrollbar */
+  scrollbar-width: none; /* Not fully supported yet, but helps */
+}
+
+.scrollnone::-webkit-scrollbar {
+  display: none; /* Hide scrollbar track */
+}
+
+.button-gradient {
+  @apply bg-[length:400%]  bg-[0_50%] duration-500 bg-[linear-gradient(90deg,#D01498,#647ECB,#D01498,#647ECB)]
+    hover:bg-[100%_50%];
+}
+.text-gradient {
+  @apply bg-[length:300%]  bg-[0_50%] duration-1000  bg-[linear-gradient(90deg,#D64DEA,#D82A28,#F89245,#D64DEA,#D82A28,#F89245)]
+  hover:bg-[100%_50%];
+}
+
+.border-gradient {
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right, #f06b6b, #f0c27b) 1 100% 0 100%;
+}
+
+.bg1 {
+  background-color: hsla(257, 36%, 48%, 0);
+  background-image: radial-gradient(
+    circle closest-corner at right center,
+    hsla(330, 81%, 35%, 0.4) 0%,
+    hsla(257, 36%, 48%, 0) 120%
+  );
+}
+.bg2 {
+  background-color: hsla(257, 36%, 48%, 0);
+  background-image: radial-gradient(
+    circle closest-corner at left center,
+    hsla(282, 83%, 26%, 0.4) 0%,
+    hsla(257, 36%, 48%, 0) 80%
+  );
+}
+
+.card:hover button {
+  @apply opacity-100 bottom-1/2;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #111111be;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b81186;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #760e57;
+  cursor: pointer;
+}
+
+
